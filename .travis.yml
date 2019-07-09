@@ -2,6 +2,8 @@
 sudo: required
 language: objective-c
 osx_image: xcode11
+xcode_destination: platform=macOS
+xcode_project: GPGMail.xcodeproj
 
 before_install:
   - cd Dependencies
