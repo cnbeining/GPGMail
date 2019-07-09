@@ -2,8 +2,12 @@
 sudo: required
 language: objective-c
 osx_image: xcode11
+xcode_destination: platform=macOS
+xcode_project: GPGMail.xcodeproj
 
 before_install:
+  - cd $TRAVIS_BUILD_DIR
+  - pwd
   - cd Dependencies
   - git clone https://github.com/GPGTools/Libmacgpg.git
   - cd ..
@@ -13,3 +17,5 @@ install:
   - brew install gnupg
 
 script:
+  - make
+  
